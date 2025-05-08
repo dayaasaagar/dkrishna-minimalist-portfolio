@@ -1,3 +1,6 @@
 { pkgs }: {
-  deps = [ ];
+  deps = [
+    pkgs.zulu8
+    pkgs.temurin-jre-bin-18
+   ];
 }

@@ -1,5 +1,5 @@
 entrypoint = "main.py"
-modules = ["python-3.8:v2-20230907-3d66d15"]
+modules = ["nodejs-20", "python-3.8:v2-20230907-3d66d15"]
 
 hidden = [".pythonlibs"]
 
@@ -8,3 +8,19 @@ channel = "stable-23_05"
 
 [env]
 LANG = "en_US.UTF-8"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[[ports]]
+localPort = 3001
+externalPort = 3001
+
+[[ports]]
+localPort = 3002
+externalPort = 3002
+
+[[ports]]
+localPort = 3003
+externalPort = 3003
