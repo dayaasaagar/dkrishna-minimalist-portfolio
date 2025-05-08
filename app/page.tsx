@@ -1,5 +1,6 @@
 // Minimalist Portfolio based on Dayasagar's Resume
 "use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ChevronDown, ChevronUp } from "lucide-react";
@@ -23,13 +24,44 @@ export default function Portfolio() {
 
       <section className="my-12">
         <h2 className="text-2xl font-semibold mb-4">Experience</h2>
-        {/* Experience cards remain unchanged */}
-        {/* Existing experience content goes here */}
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Freelance Software Engineer</h3>
+            <p className="text-sm text-gray-600">Aug 2024 – Present</p>
+            <ul className="list-disc list-inside">
+              <li>Built cloud-native APIs with FastAPI and PostgreSQL for commercial fleet tracking.</li>
+              <li>Designed and deployed containerized microservices on AWS EC2 using Docker and GitHub Actions.</li>
+              <li>Implemented authentication, trip history, and maintenance tracking with scalable architecture.</li>
+            </ul>
+          </CardContent>
+        </Card>
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Valuemomentum – Automation Intern</h3>
+            <p className="text-sm text-gray-600">Jun 2024 – Aug 2024</p>
+            <ul className="list-disc list-inside">
+              <li>Developed custom PCF components in Power Apps for extended automation features.</li>
+              <li>Built real-time job monitoring dashboard using AngularJS and Plotly visualizations.</li>
+              <li>Integrated Power Apps and Power BI with AngularJS frontend for enhanced automation.</li>
+            </ul>
+          </CardContent>
+        </Card>
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Reliance Industries – Software Development Engineer</h3>
+            <p className="text-sm text-gray-600">Nov 2022 – Aug 2023</p>
+            <ul className="list-disc list-inside">
+              <li>Developed Java microservices for ordering, shipping, and invoicing processes.</li>
+              <li>Created dashboards using Angular and Plotly Dash for pricing analytics and real-time data visualization.</li>
+              <li>Automated Tidal batch job monitoring using PowerShell scripts and Jenkins CI/CD.</li>
+              <li>Collaborated with cross-functional teams to implement RESTful APIs and SQL optimizations.</li>
+            </ul>
+          </CardContent>
+        </Card>
       </section>
 
       <section className="my-12">
         <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-        {/* Main Projects */}
         <Card className="mb-4">
           <CardContent>
             <h3 className="text-xl font-bold">Task Scheduler API <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
@@ -68,7 +100,6 @@ export default function Portfolio() {
           </CardContent>
         </Card>
 
-        {/* Toggleable Extra Projects */}
         {showMoreProjects && (
           <>
             <Card className="mb-4"><CardContent><h3 className="text-xl font-bold">Project 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CardContent></Card>
