@@ -1,14 +1,14 @@
-// Minimalist Portfolio based on Dayasagar's Resume
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ChevronDown, ChevronUp } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown, ChevronUp, Info } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Portfolio() {
   const [showMoreProjects, setShowMoreProjects] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   return (
     <main className="p-6 max-w-4xl mx-auto text-gray-900">
@@ -23,102 +23,36 @@ export default function Portfolio() {
       </section>
 
       <section className="my-12">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold">About Me & Education</h2>
+          <Button variant="ghost" onClick={() => setShowAbout(!showAbout)}>
+            <Info className="mr-2" /> {showAbout ? "Hide" : "Show"}
+          </Button>
+        </div>
+        {showAbout && (
+          <Card className="mb-6">
+            <CardContent className="space-y-4">
+              <div>
+                <h3 className="text-xl font-bold">About Me</h3>
+                <p>I am currently pursuing my Master's in Computer Science at Syracuse University with a strong focus on backend development, cloud architecture, and DevOps. I'm passionate about building scalable systems and solving real-world engineering problems.</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Education</h3>
+                <p><strong>Syracuse University</strong> — Master of Science in Computer Science<br />Aug 2023 – May 2025 | GPA: 3.8</p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
+      </section>
+
+      <section className="my-12">
         <h2 className="text-2xl font-semibold mb-4">Experience</h2>
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">Freelance Software Engineer</h3>
-            <p className="text-sm text-gray-600">Aug 2024 – Present</p>
-            <ul className="list-disc list-inside">
-              <li>Built cloud-native APIs with FastAPI and PostgreSQL for commercial fleet tracking.</li>
-              <li>Designed and deployed containerized microservices on AWS EC2 using Docker and GitHub Actions.</li>
-              <li>Implemented authentication, trip history, and maintenance tracking with scalable architecture.</li>
-            </ul>
-          </CardContent>
-        </Card>
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">Valuemomentum – Automation Intern</h3>
-            <p className="text-sm text-gray-600">Jun 2024 – Aug 2024</p>
-            <ul className="list-disc list-inside">
-              <li>Developed custom PCF components in Power Apps for extended automation features.</li>
-              <li>Built real-time job monitoring dashboard using AngularJS and Plotly visualizations.</li>
-              <li>Integrated Power Apps and Power BI with AngularJS frontend for enhanced automation.</li>
-            </ul>
-          </CardContent>
-        </Card>
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">Reliance Industries – Software Development Engineer</h3>
-            <p className="text-sm text-gray-600">Nov 2022 – Aug 2023</p>
-            <ul className="list-disc list-inside">
-              <li>Developed Java microservices for ordering, shipping, and invoicing processes.</li>
-              <li>Created dashboards using Angular and Plotly Dash for pricing analytics and real-time data visualization.</li>
-              <li>Automated Tidal batch job monitoring using PowerShell scripts and Jenkins CI/CD.</li>
-              <li>Collaborated with cross-functional teams to implement RESTful APIs and SQL optimizations.</li>
-            </ul>
-          </CardContent>
-        </Card>
+        
       </section>
 
       <section className="my-12">
         <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">Task Scheduler API <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
-            <ul className="list-disc list-inside">
-              <li>Built REST API using Django REST Framework for task scheduling and management.</li>
-              <li>Implemented JWT-based auth, AWS S3 for file storage, and RDS (PostgreSQL) for database.</li>
-              <li>CI/CD with GitHub Actions and AWS CodeDeploy, deployed to EC2 using Nginx & Gunicorn.</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">GenAI Chatbot API <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
-            <ul className="list-disc list-inside">
-              <li>Developed FastAPI backend integrated with OpenAI GPT API for natural language chat.</li>
-              <li>Used FAISS for fast semantic search and Hugging Face Transformers for custom fine-tuning.</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">Food Delivery App <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
-            <ul className="list-disc list-inside">
-              <li>Built MERN stack app with real-time order tracking and role-based user authentication.</li>
-              <li>Designed scalable MongoDB schema; used POSTMATES API for delivery integration.</li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">PeopleFirst – Reliance HR App</h3>
-            <p>Developed Spring Boot APIs and Angular UI for leave, reimbursement, and payroll modules.</p>
-          </CardContent>
-        </Card>
-
-        {showMoreProjects && (
-          <>
-            <Card className="mb-4"><CardContent><h3 className="text-xl font-bold">Project 1</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CardContent></Card>
-            <Card className="mb-4"><CardContent><h3 className="text-xl font-bold">Project 2</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CardContent></Card>
-            <Card className="mb-4"><CardContent><h3 className="text-xl font-bold">Project 3</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CardContent></Card>
-            <Card className="mb-4"><CardContent><h3 className="text-xl font-bold">Project 4</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CardContent></Card>
-            <Card className="mb-4"><CardContent><h3 className="text-xl font-bold">Project 5</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></CardContent></Card>
-          </>
-        )}
-
-        <div className="flex justify-center mt-4">
-          <Button onClick={() => setShowMoreProjects(!showMoreProjects)} variant="outline">
-            {showMoreProjects ? (
-              <><ChevronUp className="mr-2" /> Show Less</>
-            ) : (
-              <><ChevronDown className="mr-2" /> Show More</>
-            )}
-          </Button>
-        </div>
+       
       </section>
 
       <section className="my-12 bg-gray-100 p-6 rounded-lg shadow-md">
