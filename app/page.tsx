@@ -97,7 +97,7 @@ export default function Portfolio() {
 
         <Card className="mb-4">
           <CardContent>
-            <h3 className="text-xl font-bold">Task Scheduler API <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <h3 className="text-xl font-bold">Task Scheduler API <Link href="" className="text-blue-600 underline">(GitHub)</Link></h3>
             <ul className="list-disc list-inside">
               <li>Built Django REST API for managing scheduled tasks.</li>
               <li>Deployed on AWS EC2 with Gunicorn, Nginx, and CI/CD pipelines.</li>
@@ -107,7 +107,7 @@ export default function Portfolio() {
 
         <Card className="mb-4">
           <CardContent>
-            <h3 className="text-xl font-bold">GenAI Chatbot API <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <h3 className="text-xl font-bold">GenAI Chatbot API <Link href="https://github.com/dayaasaagar/Gen-AI-Chatbot" className="text-blue-600 underline">(GitHub)</Link></h3>
             <ul className="list-disc list-inside">
               <li>Built FastAPI backend with OpenAI GPT, HuggingFace, and FAISS search.</li>
               <li>Delivered domain-specific chatbot experiences using RAG techniques.</li>
