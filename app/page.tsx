@@ -124,6 +124,16 @@ export default function Portfolio() {
             </ul>
           </CardContent>
         </Card>
+         <Card className="mb-4">
+          <CardContent>
+              <h3 className="text-xl font-bold">Project 5 – Context-Aware Standup Bot for Engineering Teams <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
+              <ul className="list-disc list-inside">
+                <li>Built a Slack-integrated assistant that parses GitHub commits, JIRA updates, and PR activity to auto-generate daily standups using OpenAI GPT-4 and developer metadata.</li>
+                <li>Engineered backend services in FastAPI with Redis caching and PostgreSQL storage for sprint-wise summaries.</li>
+                <li>Developed a React dashboard for engineers to review, edit, and approve AI-generated standup entries with real-time updates and overrides.</li>
+              </ul>
+          </CardContent>
+        </Card>
 
         <Card className="mb-4">
           <CardContent>
@@ -131,6 +141,7 @@ export default function Portfolio() {
             <p>Spring Boot + Angular platform for managing payroll, leave, and reimbursements.</p>
           </CardContent>
         </Card>
+        
 
         {/* More Projects Toggle */}
         {showMoreProjects && (
@@ -164,7 +175,7 @@ export default function Portfolio() {
           <Card><CardContent><strong>Languages:</strong> Python, Java, SQL, JavaScript, C/C++, PHP, HTML/CSS</CardContent></Card>
           <Card><CardContent><strong>Frameworks:</strong> Django, Spring Boot, React, Angular, Express</CardContent></Card>
           <Card><CardContent><strong>DevOps:</strong> Docker, Kubernetes, GitHub Actions, Jenkins</CardContent></Card>
-          <Card><CardContent><strong>Cloud:</strong> AWS (EC2, RDS, S3, CodeDeploy), Azure</CardContent></Card>
+          <Card><CardContent><strong>Cloud:</strong> AWS (EC2, RDS, S3, CodeDeploy), Azure,GCP</CardContent></Card>
         </div>
       </section>
     </main>
