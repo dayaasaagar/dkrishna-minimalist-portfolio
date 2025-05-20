@@ -14,7 +14,7 @@ export default function Portfolio() {
     <main className="p-6 max-w-4xl mx-auto text-gray-900">
       {/* Hero */}
       <section className="text-center my-16">
-        <h1 className="text-4xl font-bold">Dayasagar Krishnanmani</h1>3
+        <h1 className="text-4xl font-bold">Dayasagar Krishnanmani</h1>
         <p className="text-lg mt-4">Software Developer | Cloud Enthusiast | DevOps Learner</p>
         <div className="flex justify-center gap-4 mt-6">
           <Link href="mailto:dkrishna@syr.edu"><Mail /></Link>
