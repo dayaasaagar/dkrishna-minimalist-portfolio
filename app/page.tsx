@@ -14,7 +14,7 @@ export default function Portfolio() {
     <main className="p-6 max-w-4xl mx-auto text-gray-900">
       {/* Hero */}
       <section className="text-center my-16">
-        <h1 className="text-4xl font-bold">Dayasagar Krishnanmani</h1>
+        <h1 className="text-4xl font-bold">Dayasagar Krishnanmani</h1>3
         <p className="text-lg mt-4">Software Developer | Cloud Enthusiast | DevOps Learner</p>
         <div className="flex justify-center gap-4 mt-6">
           <Link href="mailto:dkrishna@syr.edu"><Mail /></Link>
@@ -104,6 +104,18 @@ export default function Portfolio() {
             </ul>
           </CardContent>
         </Card>
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Cloud Log Anomaly Detection System <Link href="https://github.com/dayaasaagar/Cloud-Anamoly-Detection" className="text-blue-600 underline">(GitHub)</Link></h3>
+              <ul className="list-disc list-inside">
+                <li>Ingested logs from EC2, EKS, and RabbitMQ using AWS Lambda and Kinesis.</li>
+                <li>Parsed logs using Python + Regex; stored structured data in Amazon Redshift.</li>
+                <li>Detected anomalies and triggered alerts via Slack using Lambda.</li>
+                <li>Built Spring Boot dashboard to visualize logs and alerts in real-time.</li>
+              </ul>
+           </CardContent>
+        </Card>
+
 
         <Card className="mb-4">
           <CardContent>
@@ -114,19 +126,9 @@ export default function Portfolio() {
             </ul>
           </CardContent>
         </Card>
-
-        <Card className="mb-4">
-          <CardContent>
-            <h3 className="text-xl font-bold">Food Delivery App <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
-            <ul className="list-disc list-inside">
-              <li>MERN stack app for browsing menus, placing orders, and tracking deliveries.</li>
-              <li>Integrated POSTMATES API and role-based JWT authentication.</li>
-            </ul>
-          </CardContent>
-        </Card>
          <Card className="mb-4">
           <CardContent>
-              <h3 className="text-xl font-bold">Project 5 – Context-Aware Standup Bot for Engineering Teams <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
+              <h3 className="text-xl font-bold">Context-Aware Standup Bot for Engineering Teams <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
               <ul className="list-disc list-inside">
                 <li>Built a Slack-integrated assistant that parses GitHub commits, JIRA updates, and PR activity to auto-generate daily standups using OpenAI GPT-4 and developer metadata.</li>
                 <li>Engineered backend services in FastAPI with Redis caching and PostgreSQL storage for sprint-wise summaries.</li>
@@ -139,6 +141,15 @@ export default function Portfolio() {
           <CardContent>
             <h3 className="text-xl font-bold">PeopleFirst – Reliance HR App</h3>
             <p>Spring Boot + Angular platform for managing payroll, leave, and reimbursements.</p>
+          </CardContent>
+        </Card>
+              <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Food Delivery App <Link href="https://github.com/dayaasaagar/Food-Delivery-App/tree/feature-branch" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <ul className="list-disc list-inside">
+              <li>MERN stack app for browsing menus, placing orders, and tracking deliveries.</li>
+              <li>Integrated POSTMATES API and role-based JWT authentication.</li>
+            </ul>
           </CardContent>
         </Card>
         
