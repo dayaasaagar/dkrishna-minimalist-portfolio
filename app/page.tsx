@@ -61,32 +61,32 @@ export default function Portfolio() {
 
   /* ---------- Skills Data ---------- */
   const skills = [
-    { name: "AWS", logo: "aws.svg" },
-    { name: "Docker", logo: "docker.svg" },
-    { name: "Kubernetes", logo: "kubernetes.svg" },
-    { name: "Azure", logo: "azure.svg" },
-    { name: "GCP", logo: "gcp.svg" },
-    { name: "Terraform", logo: "terraform.svg" },
-    { name: "Java", logo: "java.svg" },
-    { name: "Spring Boot", logo: "spring.svg" },
-    { name: "Node.js", logo: "nodejs.svg" },
-    { name: "Express", logo: "express.svg" },
-    { name: "React", logo: "react.svg" },
-    { name: "Next.js", logo: "nextjs.svg" },
-    { name: "TypeScript", logo: "typescript.svg" },
-    { name: "JavaScript", logo: "javascript.svg" },
-    { name: "Python", logo: "python.svg" },
-    { name: "Go", logo: "go.svg" },
-    { name: "Rust", logo: "rust.svg" },
-    { name: "GraphQL", logo: "graphql.svg" },
-    { name: "PostgreSQL", logo: "postgresql.svg" },
-    { name: "MySQL", logo: "mysql.svg" },
-    { name: "MongoDB", logo: "mongodb.svg" },
-    { name: "Redis", logo: "redis.svg" },
-    { name: "Jenkins", logo: "jenkins.svg" },
-    { name: "GitHub Actions", logo: "githubactions.svg" },
-    { name: "SonarQube", logo: "sonarqube.svg" },
-    { name: "PowerShell", logo: "powershell.svg" },
+    { name: "AWS", logo: "/aws.svg" },
+    { name: "Docker", logo: "/docker.svg" },
+    { name: "Kubernetes", logo: "/kubernetes.svg" },
+    { name: "Azure", logo: "/azure.svg" },
+    { name: "GCP", logo: "/gcp.svg" },
+    { name: "Terraform", logo: "/terraform.svg" },
+    { name: "Java", logo: "/java.svg" },
+    { name: "Spring Boot", logo: "/spring.svg" },
+    { name: "Node.js", logo: "/nodejs.svg" },
+    { name: "Express", logo: "/express.svg" },
+    { name: "React", logo: "/react.svg" },
+    { name: "Next.js", logo: "/nextjs.svg" },
+    { name: "TypeScript", logo: "/typescript.svg" },
+    { name: "JavaScript", logo: "/javascript.svg" },
+    { name: "Python", logo: "/python.svg" },
+    { name: "Go", logo: "/go.svg" },
+    { name: "Rust", logo: "/rust.svg" },
+    { name: "GraphQL", logo: "/graphql.svg" },
+    { name: "PostgreSQL", logo: "/postgresql.svg" },
+    { name: "MySQL", logo: "/mysql.svg" },
+    { name: "MongoDB", logo: "/mongodb.svg" },
+    { name: "Redis", logo: "/redis.svg" },
+    { name: "Jenkins", logo: "/jenkins.svg" },
+    { name: "GitHub Actions", logo: "/githubactions.svg" },
+    { name: "SonarQube", logo: "/sonarqube.svg" },
+    { name: "PowerShell", logo: "/powershell.svg" },
   ];
 
   return (
@@ -255,7 +255,7 @@ export default function Portfolio() {
               className="flex flex-col items-center justify-center p-4 bg-black/5 rounded-xl hover:scale-105 transition cursor-pointer"
               title={skill.name}
             >
-              <Image src={skill.logo} alt={skill.name} width={50} height={50} />
+              <Image src={skill.logo} a/lt={skill.name} width={50} height={50} />
               <span className="text-xs mt-2">{skill.name}</span>
             </div>
           ))}
