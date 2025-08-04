@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Info } from "lucide-react";
+import { Github, Linkedin, Mail, Info, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Portfolio() {
   const [showAbout, setShowAbout] = useState(false);
+  const [showMoreProjects, setShowMoreProjects] = useState(false);
 
   /* ---------- Experience Data ---------- */
   const experience = [
@@ -153,6 +154,94 @@ export default function Portfolio() {
               </Card>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ---------- Projects Section ---------- */}
+      <section className="my-12">
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#232F3E]">🚀 Projects</h2>
+
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Task Scheduler API <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <ul className="list-disc list-inside">
+              <li>Built Django REST API for managing scheduled tasks.</li>
+              <li>Deployed on AWS EC2 with Gunicorn, Nginx, and CI/CD pipelines.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Cloud Log Anomaly Detection System <Link href="https://github.com/dayaasaagar/Cloud-Anamoly-Detection" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <ul className="list-disc list-inside">
+              <li>Ingested logs from EC2, EKS, and RabbitMQ using AWS Lambda and Kinesis.</li>
+              <li>Parsed logs using Python + Regex; stored structured data in Amazon Redshift.</li>
+              <li>Detected anomalies and triggered alerts via Slack using Lambda.</li>
+              <li>Built Spring Boot dashboard to visualize logs and alerts in real-time.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">GenAI Chatbot API <Link href="https://github.com/dayaasaagar/Gen-AI-Chatbot" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <ul className="list-disc list-inside">
+              <li>Built FastAPI backend with OpenAI GPT, HuggingFace, and FAISS search.</li>
+              <li>Delivered domain-specific chatbot experiences using RAG techniques.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Context-Aware Standup Bot for Engineering Teams <Link href="#" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <ul className="list-disc list-inside">
+              <li>Slack-integrated assistant that parses GitHub commits, JIRA updates, and PR activity to auto-generate daily standups using OpenAI GPT-4.</li>
+              <li>FastAPI backend with Redis caching and PostgreSQL storage for sprint summaries.</li>
+              <li>React dashboard for engineers to review and approve AI-generated standup entries.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">PeopleFirst – Reliance HR App</h3>
+            <p>Spring Boot + Angular platform for managing payroll, leave, and reimbursements.</p>
+          </CardContent>
+        </Card>
+
+        <Card className="mb-4">
+          <CardContent>
+            <h3 className="text-xl font-bold">Food Delivery App <Link href="https://github.com/dayaasaagar/Food-Delivery-App/tree/feature-branch" className="text-blue-600 underline">(GitHub)</Link></h3>
+            <ul className="list-disc list-inside">
+              <li>MERN stack app for browsing menus, placing orders, and tracking deliveries.</li>
+              <li>Integrated POSTMATES API and role-based JWT authentication.</li>
+            </ul>
+          </CardContent>
+        </Card>
+
+        {showMoreProjects && (
+          <>
+            {[1, 2, 3].map(n => (
+              <Card key={n} className="mb-4">
+                <CardContent>
+                  <h3 className="text-xl font-bold">Project {n + 6}</h3>
+                  <p>Additional project description goes here.</p>
+                </CardContent>
+              </Card>
+            ))}
+          </>
+        )}
+
+        <div className="flex justify-center mt-4">
+          <Button onClick={() => setShowMoreProjects(!showMoreProjects)} variant="outline">
+            {showMoreProjects ? (
+              <><ChevronUp className="mr-2" /> Show Less</>
+            ) : (
+              <><ChevronDown className="mr-2" /> Show More</>
+            )}
+          </Button>
         </div>
       </section>
 
